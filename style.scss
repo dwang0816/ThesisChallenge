@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+
+body {
+  background-image:url("./background.png");
+  background-size: cover;
+  padding: 16px;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width:1280px){
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "nav nav" "message form" "footer footer";
+    grid-template-rows: 80px 1fr 60px;
+    padding: 20px 60px;
+  }
+}
+
+a{
+  font-family: 'Roboto', sans-serif;
+}
+
+nav{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 8vh;
+  color: white;
+
+  @media screen and (min-width:1280px){
+    grid-area: nav;
+  }
+
+  .logo{
+    font-size: 30px;
+  }
+
+  .nav-links{
+    display: flex;
+    justify-content: space-around;
+
+    li {
+      list-style: none;
+      padding-right: 5px;
+
+      @media screen and (min-width:1280px){
+        padding-right: 60px;
+      }
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      font-family: 'Roboto', sans-serif;
+      
+      &:hover{
+        text-decoration: underline;
+      }
+
+      @media screen and (min-width:1280px){
+        font-size: 22px;
+      }
+    }
+
+  }
+
+  .burger div{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+  }
+}
+
+.message-wrapper{
+  color: white;
+  font-family: 'Roboto', sans-serif;
+
+  @media screen and (min-width:1280px){
+    grid-area: message;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 90px;
+  }
+  
+  .slogan {
+    font-size: 30px;
+    padding: 22px 0;
+
+    @media screen and (min-width: 768px){
+      padding-top: 50px;
+      text-align: center;
+    }
+
+    @media screen and (min-width: 1280px){
+      max-width: 600px;
+      text-align: left;
+      padding-top: 0px;
+    }
+  }
+
+  .message{
+    font-size: 20px;
+
+    @media screen and (min-width: 768px){
+      text-align: center;
+    }
+
+    @media screen and (min-width: 1280px){
+      max-width: 435px;
+      font-size: 24px;
+      text-align: left;
+      line-height: 1.5;
+    }
+  }
+}
+
+.form-wrapper{
+  color: white;
+  box-sizing: border-box;
+  padding: 35px 0;
+  width: 100%;
+
+  @media screen and (min-width: 768px){
+    margin: 0 auto;
+    max-width: 550px;
+    padding-top: 75px;
+  }
+
+  @media screen and (min-width:1280px){
+    grid-area: form;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  h4{
+    text-align: center;
+    font-family: 'Roboto';
+    padding-bottom: 5px;
+  }
+
+  .input-fields{
+    display: flex;
+    flex-direction: column;
+    
+    input{
+      padding: 15px;
+      background: #ffffff26;
+      
+      &::placeholder{
+        color: white;
+      }
+      &:nth-child(1){
+        border-radius: 5px 5px 0px 0px;
+      }
+    }
+
+    button{
+      border-radius: 0px 0px 5px 5px;
+      background-color: #2d99ec;
+      color: white;
+      padding: 20px;
+      border: 0;
+      
+      &:hover {
+        cursor: pointer;
+        background-color: #68ade2;
+        transition: 0.5s;
+      }
+    }
+  }
+
+  .terms{
+    text-align: center;
+    padding-top: 25px;
+    font-family: 'Roboto', sans-serif;
+
+    h5{
+      color: #7e7d7d;
+      padding-bottom: 8px;
+    }
+
+    a{
+      color: #d2d1d1;
+      text-decoration: none;
+    }
+  }
+}
+
+footer{
+  flex: 1;
+  display: flex;
+  flex-direction: column-reverse;
+  padding-top: 30px;
+  
+
+  @media screen and (min-width:1280px){
+    grid-area: footer;
+    flex-direction: row;
+  }
+
+  .copy-right{
+    color:#afafb0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    padding: 5px;
+    text-align: center;
+    
+    @media screen and (min-width: 768px){
+      padding-top: 16px;
+    }
+    
+  }
+
+  .footer-links{
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+    
+    @media screen and (min-width: 768px){
+      max-width: 550px;
+      margin: 0 auto;
+    }
+
+    @media screen and (min-width: 1280px){
+      margin-left: auto;
+      margin-right: 0;
+    }
+    
+    li{
+      list-style: none;
+
+      @media screen and (min-width:1280px){
+        display: flex;
+        align-items: flex-end;
+      }
+
+      a{
+        color: white;
+        text-decoration: none;
+      
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+
+    
+  }
+}
+
