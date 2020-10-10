@@ -150,6 +150,10 @@ nav{
     text-align: center;
     font-family: 'Roboto';
     padding-bottom: 5px;
+
+    @media screen and (min-width:1280px){
+      padding-bottom: 24px;
+    }
   }
 
   .input-fields{

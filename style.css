@@ -114,6 +114,9 @@ nav {
     text-align: center;
     font-family: 'Roboto';
     padding-bottom: 5px; }
+    @media screen and (min-width: 1280px) {
+      .form-wrapper h4 {
+        padding-bottom: 24px; } }
   .form-wrapper .input-fields {
     display: flex;
     flex-direction: column; }
